@@ -1,0 +1,66 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* Style för starsidan */
+
+#main_page_wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 75px 200px 200px 200px;
+    grid-template-areas:
+    "he he"
+    "sp sp"
+    "a1 a2"
+    "fo fo";
+}
+
+header{
+    grid-area: he;
+    background: lightblue;
+}
+
+nav{
+    width: 2fr;
+    display: flex;
+}
+
+#nav_button{
+    top: 100px;
+    right: 0;
+    height: 50px;
+    width: 50px;
+    background: lightgreen;
+    position: fixed;
+}
+
+#nav_slider_menu{
+    top: 150px;
+    right: 0;
+    height: 300px;
+    width: 125px;
+    background: lightgreen;
+    position: fixed;
+}
+
+#main_section_picture{
+    grid-area: sp;
+    background: lightcoral;
+}
+
+#main_article_info{
+    grid-area: a1;
+    background: lightcyan;
+}
+
+#main_article_serv{
+    grid-area: a2;
+    background: lightgoldenrodyellow;
+}
+
+footer{
+    grid-area: fo;
+    background: lightgray;
+}
