@@ -21,7 +21,7 @@ function toggle_sub_service_menu(){
 sub_service_button.addEventListener("click", toggle_sub_service_menu)
 
 // close sub_service_menu when switching to desktop
-var query = window.matchMedia("(max-width: 800px)")
+var query = window.matchMedia("(max-width: 500px)")
 
 query.addListener(()=>{
     if (query.matches){

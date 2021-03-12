@@ -4,17 +4,18 @@
     margin: 0;
 }
 
-/* Style för starsidan */
+/* Style för index */
 
 #main_page_wrapper{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 75px 200px 200px 150px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 75px 300px 200px 200px 150px;
     grid-template-areas:
-    "he he"
-    "sp sp"
-    "a1 a2"
-    "fo fo";
+    "he"
+    "sp"
+    "a1"
+    "a2"
+    "fo";
 }
 
 header{
@@ -23,15 +24,14 @@ header{
 }
 
 nav{
-    width: 2fr;
     display: flex;
 }
 
 .nav_button{
-    top: 0vh;
-    right: 0;
-    height: 50px;
-    width: 50px;
+    top: 7.5px;
+    right: 0px;
+    height: 60px;
+    width: 60px;
     background: lightgreen;
     position: fixed;
 }
@@ -42,7 +42,7 @@ nav{
 
 .nav_slider_menu{
     display: flex;
-    top: 50px;
+    top: 67.5px;
     right: -125px;
     height: 300px;
     width: 125px;
@@ -52,7 +52,12 @@ nav{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    list-style: none;
     z-index: 2;
+}
+
+.nav_slider_menu li a{
+    text-decoration: none;
 }
 
 .nav_slider_menu_active{
@@ -61,9 +66,9 @@ nav{
 
 .sub_service_menu{
     display: flex;
-    top: 100px;
+    top: 67.5px;
     right: -125px;
-    height: 75px;
+    height: 140px;
     width: 100px;
     background: lightgreen;
     position: fixed;
@@ -71,11 +76,16 @@ nav{
     justify-content: space-evenly;
     align-items: center;
     transition: 0.2s;
+    list-style: none;
     z-index: 0;
 }
 
+.sub_service_menu li a{
+    text-decoration: none;
+}
+
 .sub_service_toggle{
-    margin-left: 0px
+    cursor: pointer;
 }
 
 .sub_service_menu_active{
@@ -102,11 +112,65 @@ footer{
     background: lightgray;
 }
 
-@media screen and (min-width: 800px) {
+
+/* Style för service_pri */
+
+#service_page_wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 75px 200px 1000px 150px;
+    grid-template-areas:
+    "he"
+    "ip"
+    "si"
+    "fo";
+}
+
+#service_private_info{
+    grid-area: ip;
+    background: lightsalmon;
+}
+
+#service_main{
+    grid-area: si;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background: lightseagreen;
+}
+
+#service_main article{
+    border: black solid 2px;
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+#service_main article img{
+    height: 200px;
+    width: 300px;
+}
+
+/* Style för service_com */
+
+#service_company_info{
+    grid-area: ip;
+    background: lightpink;
+}
+
+
+/* Style för desktop-läge */
+
+@media screen and (min-width: 500px) {
+
+
+    /* Style för index */
 
     #main_page_wrapper{
-        grid-template-columns: 100px 1fr 1fr 100px;
-        grid-template-rows: 75px 50px 300px 250px 150px;
+        grid-template-columns: 200px 1fr 1fr 200px;
+        grid-template-rows: 100px 60px 300px 250px 150px;
         grid-template-areas:
         "he he he he"
         "na na na na"
@@ -130,7 +194,7 @@ footer{
     .nav_slider_menu{
         top: 0px;
         right: 0px;
-        height: 50px;
+        height: 60px;
         width: 100vw;
         flex-direction: row;
         justify-content: space-around;
@@ -142,14 +206,17 @@ footer{
     }
 
     .sub_service_menu{
-        top: -75px;
-        right: 0px;
-        left: 12%;
+        top: -60px;
+        left: 0px;
+        width: 33vw;
+        height: 60px;
         position: absolute;
+        flex-direction: row;
+        justify-content: space-around;
     }
 
     .sub_service_menu_active{
-        transform: translatey(200px);
+        transform: translatey(220px);
     }
 
     #left_side_space{
@@ -161,5 +228,33 @@ footer{
         grid-area: rs;
         background: lightsteelblue;
     }
+
+
+    /* Style för service_pri */
+
+    #service_page_wrapper{
+        display: grid;
+        grid-template-columns: 200px 1fr 200px;
+        grid-template-rows: 100px 60px 250px 500px 150px;
+        grid-template-areas:
+        "he he he"
+        "na na na"
+        "ls ip rs"
+        "ls si rs"
+        "fo fo fo";
+    }
+
+    #service_main article{
+        height: 200px;
+        width: 500px;
+        flex-direction: row;
+    }
+
+    #service_main article img{
+        height: 200px;
+        width: 200px;
+    }
+
+    /* Style för service_com */
 
 }
