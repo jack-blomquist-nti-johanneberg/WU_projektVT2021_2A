@@ -10,6 +10,7 @@ function toggle_nav_menu(){
 
 nav_button.addEventListener("click", toggle_nav_menu)
 
+
 // slide out service menu
 const sub_service_button = document.querySelector(".sub_service_toggle")
 const sub_service_menu = document.querySelector(".sub_service_menu")
@@ -20,8 +21,9 @@ function toggle_sub_service_menu(){
     
 sub_service_button.addEventListener("click", toggle_sub_service_menu)
 
+
 // close sub_service_menu when switching to desktop
-var query = window.matchMedia("(max-width: 500px)")
+var query = window.matchMedia("(max-width: 820px)")
 
 query.addListener(()=>{
     if (query.matches){

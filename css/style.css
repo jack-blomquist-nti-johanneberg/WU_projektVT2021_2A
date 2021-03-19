@@ -1,4 +1,5 @@
 
+/* Allmän style */
 *{
     padding: 0;
     margin: 0;
@@ -20,20 +21,23 @@
 
 header{
     grid-area: he;
-    background: lightblue;
+    background: rgb(241, 246, 249);
 }
 
 nav{
     display: flex;
+    font-size: 18px;
 }
 
 .nav_button{
+    border-radius: 5px 0px 0px 5px;
     top: 7.5px;
     right: 0px;
     height: 60px;
     width: 60px;
-    background: lightgreen;
+    background: rgb(57, 72, 103);
     position: fixed;
+    z-index: 1;
 }
 
 .nav_button:hover{
@@ -42,11 +46,12 @@ nav{
 
 .nav_slider_menu{
     display: flex;
-    top: 67.5px;
+    border-radius: 5px 0px 0px 5px;
+    top: 62.5px;
     right: -125px;
     height: 300px;
     width: 125px;
-    background: lightgreen;
+    background: rgb(57, 72, 103);
     position: fixed;
     transition: 0.2s;
     flex-direction: column;
@@ -56,8 +61,12 @@ nav{
     z-index: 2;
 }
 
-.nav_slider_menu li a{
+a{
     text-decoration: none;
+}
+
+a:visited{
+    color: black;
 }
 
 .nav_slider_menu_active{
@@ -66,11 +75,12 @@ nav{
 
 .sub_service_menu{
     display: flex;
-    top: 67.5px;
-    right: -125px;
+    border-radius: 5px 0px 0px 5px;
+    top: 117.5px;
+    right: -126px;
     height: 140px;
-    width: 100px;
-    background: lightgreen;
+    width: 90px;
+    background: rgb(57, 72, 103);
     position: fixed;
     flex-direction: column;
     justify-content: space-evenly;
@@ -99,17 +109,17 @@ nav{
 
 #main_article_info{
     grid-area: a1;
-    background: lightcyan;
+    background: rgb(241, 246, 249);
 }
 
 #main_article_serv{
     grid-area: a2;
-    background: lightgoldenrodyellow;
+    background: rgb(241, 246, 249);
 }
 
 footer{
     grid-area: fo;
-    background: lightgray;
+    background: rgb(20, 39, 78);
 }
 
 
@@ -153,6 +163,7 @@ footer{
     width: 300px;
 }
 
+
 /* Style för service_com */
 
 #service_company_info{
@@ -161,15 +172,61 @@ footer{
 }
 
 
+/* Style för contact */
+
+#contact_page_wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 75px 200px 200px 200px 150px;
+    grid-template-areas:
+    "he"
+    "ci"
+    "cp"
+    "cc"
+    "fo";
+}
+
+#contact_info{
+    grid-area: ci;
+    background: lightslategrey;
+}
+
+#private_contact_info{
+    grid-area: cp;
+    background: lightgoldenrodyellow;
+}
+
+#company_contact_info{
+    grid-area: cc;
+    background: lightseagreen;
+}
+
+/* Style för about */
+
+#about_page_wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 75px 700px 150px;
+    grid-template-areas: 
+    "he"
+    "as"
+    "fo";
+}
+
+#about_section{
+    grid-area: as;
+    background: lightskyblue;
+}
+
 /* Style för desktop-läge */
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 820px) {
 
 
     /* Style för index */
 
     #main_page_wrapper{
-        grid-template-columns: 200px 1fr 1fr 200px;
+        grid-template-columns: 150px 1fr 1fr 150px;
         grid-template-rows: 100px 60px 300px 250px 150px;
         grid-template-areas:
         "he he he he"
@@ -185,6 +242,7 @@ footer{
 
     nav{
         grid-area: na;
+        font-size: 20px;
     }
 
     .nav_button{
@@ -192,6 +250,7 @@ footer{
     }
 
     .nav_slider_menu{
+        border-radius: 0px;
         top: 0px;
         right: 0px;
         height: 60px;
@@ -206,9 +265,10 @@ footer{
     }
 
     .sub_service_menu{
+        border-radius: 0px 0px 5px 5px;
         top: -60px;
-        left: 0px;
-        width: 33vw;
+        left: 24vw;
+        width: 25vw;
         height: 60px;
         position: absolute;
         flex-direction: row;
@@ -221,12 +281,14 @@ footer{
 
     #left_side_space{
         grid-area: ls;
-        background: lightsteelblue;
+        background:	rgb(155, 164, 180);
+        box-shadow: inset 0px 0px 5px rgb(57, 72, 103);
     }
 
     #right_side_space{
         grid-area: rs;
-        background: lightsteelblue;
+        background:	rgb(155, 164, 180);
+        box-shadow: inset 0px 0px 5px rgb(57, 72, 103);
     }
 
 
@@ -234,7 +296,7 @@ footer{
 
     #service_page_wrapper{
         display: grid;
-        grid-template-columns: 200px 1fr 200px;
+        grid-template-columns: 150px 1fr 150px;
         grid-template-rows: 100px 60px 250px 500px 150px;
         grid-template-areas:
         "he he he"
@@ -255,6 +317,35 @@ footer{
         width: 200px;
     }
 
+
     /* Style för service_com */
 
+
+    /* Style för contact */
+
+    #contact_page_wrapper{
+        display: grid;
+        grid-template-columns: 150px 1fr 1fr 150px;
+        grid-template-rows: 100px 60px 300px 200px 150px;
+        grid-template-areas:
+        "he he he he"
+        "na na na na"
+        "ls ci ci rs"
+        "ls cp cc rs"
+        "fo fo fo fo";
+    }
+
+
+    /* Style för about */
+
+    #about_page_wrapper{
+        display: grid;
+        grid-template-columns: 150px 1fr 150px;
+        grid-template-rows: 100px 60px 700px 150px;
+        grid-template-areas: 
+        "he he he"
+        "na na na"
+        "ls as rs"
+        "fo fo fo";
+    }
 }
