@@ -9,8 +9,10 @@
 
 #main_page_wrapper{
     display: grid;
+    height: 100vh;
+    width: 100%;
     grid-template-columns: 1fr;
-    grid-template-rows: 75px 300px 200px 200px 150px;
+    grid-template-rows: 75px 300px 350px 350px 150px;
     grid-template-areas:
     "he"
     "sp"
@@ -19,9 +21,14 @@
     "fo";
 }
 
+#main_page_wrapper .nav_slider_menu li:nth-child(1){
+    border-bottom: rgb(241, 246, 249) 4px solid;
+    border-radius: 2px;
+}
+
 header{
     grid-area: he;
-    background: rgb(241, 246, 249);
+    background: rgb(20, 39, 78);
 }
 
 nav{
@@ -58,15 +65,17 @@ nav{
     justify-content: space-evenly;
     align-items: center;
     list-style: none;
+    color: rgb(241, 246, 249);
     z-index: 2;
 }
 
-a{
+nav a{
     text-decoration: none;
+    color: rgb(241, 246, 249);
 }
 
-a:visited{
-    color: black;
+nav a:visited{
+    color: rgb(241, 246, 249)
 }
 
 .nav_slider_menu_active{
@@ -107,14 +116,30 @@ a:visited{
     background: lightcoral;
 }
 
-#main_article_info{
+#main_section_info{
     grid-area: a1;
     background: rgb(241, 246, 249);
 }
 
-#main_article_serv{
+#main_article_info{
+    background: rgb(241, 246, 249);
+    border: rgb(57, 72, 103) 5px solid;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 5px;
+}
+
+#main_section_serv{
     grid-area: a2;
     background: rgb(241, 246, 249);
+}
+
+#main_article_serv{
+    background: rgb(241, 246, 249);
+    border: rgb(57, 72, 103) 5px solid;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 5px;
 }
 
 footer{
@@ -127,6 +152,8 @@ footer{
 
 #service_page_wrapper{
     display: grid;
+    height: 100vh;
+    width: 100%;
     grid-template-columns: 1fr;
     grid-template-rows: 75px 200px 1000px 150px;
     grid-template-areas:
@@ -136,9 +163,25 @@ footer{
     "fo";
 }
 
+#service_page_wrapper .nav_slider_menu li:nth-child(2){
+    border-bottom: rgb(241, 246, 249) 4px solid;
+    border-radius: 2px;
+}
+
+#service_page_pri .sub_service_menu li:nth-child(1){
+    border-bottom: rgb(241, 246, 249) 4px solid;
+    border-radius: 2px;
+}
+
 #service_private_info{
     grid-area: ip;
     background: lightsalmon;
+}
+
+#service_private_info a{
+    position: relative;
+    bottom: -175px;
+    left: -120px;
 }
 
 #service_main{
@@ -147,11 +190,11 @@ footer{
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    background: lightseagreen;
+    background: rgb(241, 246, 249);
 }
 
 #service_main article{
-    border: black solid 2px;
+    border: rgb(57, 72, 103) solid 5px;
     height: 400px;
     width: 300px;
     display: flex;
@@ -166,9 +209,20 @@ footer{
 
 /* Style för service_com */
 
+#service_page_com .sub_service_menu li:nth-child(2){
+    border-bottom: rgb(241, 246, 249) 4px solid;
+    border-radius: 2px;
+}
+
 #service_company_info{
     grid-area: ip;
     background: lightpink;
+}
+
+#service_company_info a{
+    position: relative;
+    bottom: -225px;
+    left: -139px;
 }
 
 
@@ -176,6 +230,8 @@ footer{
 
 #contact_page_wrapper{
     display: grid;
+    height: 100vh;
+    width: 100%;
     grid-template-columns: 1fr;
     grid-template-rows: 75px 200px 200px 200px 150px;
     grid-template-areas:
@@ -186,9 +242,18 @@ footer{
     "fo";
 }
 
+#contact_page_wrapper .nav_slider_menu li:nth-child(3){
+    border-bottom: rgb(241, 246, 249) 4px solid;
+    border-radius: 2px;
+}
+
 #contact_info{
     grid-area: ci;
-    background: lightslategrey;
+    background: rgb(241, 246, 249);
+}
+
+#contact_info_text{
+    margin: 10px;
 }
 
 #private_contact_info{
@@ -205,6 +270,8 @@ footer{
 
 #about_page_wrapper{
     display: grid;
+    height: 100vh;
+    width: 100%;
     grid-template-columns: 1fr;
     grid-template-rows: 75px 700px 150px;
     grid-template-areas: 
@@ -213,9 +280,14 @@ footer{
     "fo";
 }
 
+#about_page_wrapper .nav_slider_menu li:nth-child(4){
+    border-bottom: rgb(241, 246, 249) 4px solid;
+    border-radius: 2px;
+}
+
 #about_section{
     grid-area: as;
-    background: lightskyblue;
+    background: rgb(241, 246, 249);
 }
 
 /* Style för desktop-läge */
@@ -304,6 +376,12 @@ footer{
         "ls ip rs"
         "ls si rs"
         "fo fo fo";
+    }
+
+    #service_private_info a{
+        position: relative;
+        bottom: -225px;
+        left: -120px;
     }
 
     #service_main article{

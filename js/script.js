@@ -11,7 +11,7 @@ function toggle_nav_menu(){
 nav_button.addEventListener("click", toggle_nav_menu)
 
 
-// slide out service menu
+// slide out sub nav menu
 const sub_service_button = document.querySelector(".sub_service_toggle")
 const sub_service_menu = document.querySelector(".sub_service_menu")
 
