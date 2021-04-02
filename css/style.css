@@ -12,7 +12,7 @@
     height: 100vh;
     width: 100%;
     grid-template-columns: 1fr;
-    grid-template-rows: 75px 300px 350px 350px 800px;
+    grid-template-rows: 75px 300px auto auto 800px;
     grid-template-areas:
     "he"
     "sp"
@@ -46,6 +46,14 @@ nav{
     background: rgb(57, 72, 103);
     position: fixed;
     z-index: 1;
+}
+
+.burger_menu{
+    height: 3px;
+    width: 35px;
+    margin: 12px 0px 0px 12px;
+    border-radius: 2px;
+    background: rgb(241, 246, 249);
 }
 
 .nav_button:hover{
@@ -170,7 +178,7 @@ footer{
 #footer_wrapper{
     display: flex;
     align-items: flex-start;
-    justify-content: left;
+    justify-content: center;
     flex-direction: column;
     margin: 10px;
 }
@@ -216,7 +224,7 @@ footer{
     height: 100vh;
     width: 100%;
     grid-template-columns: 1fr;
-    grid-template-rows: 75px 470px 1100px 800px;
+    grid-template-rows: 75px 620px 1100px 800px;
     grid-template-areas:
     "he"
     "ip"
@@ -240,7 +248,7 @@ footer{
 }
 
 #service_private_info article{
-    margin: 50px;
+    margin: 65px 50px 50px 50px;
     padding: 20px;
     height: auto;
     width: 1fr;
@@ -298,7 +306,7 @@ footer{
 }
 
 #service_company_info article{
-    margin: 50px;
+    margin: 65px 50px 50px 50px;
     padding: 20px;
     height: auto;
     width: 1fr;
@@ -322,7 +330,7 @@ footer{
     height: 100vh;
     width: 100%;
     grid-template-columns: 1fr;
-    grid-template-rows: 75px 200px 200px 200px 800px;
+    grid-template-rows: 75px 300px auto auto 800px;
     grid-template-areas:
     "he"
     "ci"
@@ -341,18 +349,24 @@ footer{
     background: rgb(241, 246, 249);
 }
 
-#contact_info_text{
-    margin: 10px;
+#contact_info article{
+    margin: 30px;
 }
 
 #private_contact_info{
     grid-area: cp;
-    background: lightgoldenrodyellow;
+    background: rgb(241, 246, 249);
 }
 
 #company_contact_info{
     grid-area: cc;
-    background: lightseagreen;
+    background: rgb(241, 246, 249);
+}
+
+.contact_article{
+    height: auto;
+    margin: 40px;
+    padding: 10px;
 }
 
 /* Style för about */
@@ -362,7 +376,7 @@ footer{
     height: 100vh;
     width: 100%;
     grid-template-columns: 1fr;
-    grid-template-rows: 75px 700px 800px;
+    grid-template-rows: 75px auto 800px;
     grid-template-areas: 
     "he"
     "as"
@@ -379,6 +393,18 @@ footer{
     background: rgb(241, 246, 249);
 }
 
+#about_section article{
+    margin: 40px;
+}
+
+#about_section h2{
+    margin: 40px;
+}
+
+#about_section h4{
+    margin-top: 20px;
+}
+
 /* Style för desktop-läge */
 
 @media screen and (min-width: 820px) {
@@ -388,7 +414,7 @@ footer{
 
     #main_page_wrapper{
         grid-template-columns: 10% 1fr 1fr 10%;
-        grid-template-rows: 100px 60px 300px 350px 340px;
+        grid-template-rows: 100px 60px 300px auto auto;
         grid-template-areas:
         "he he he he"
         "na na na na"
@@ -510,7 +536,7 @@ footer{
     #contact_page_wrapper{
         display: grid;
         grid-template-columns: 10% 1fr 1fr 10%;
-        grid-template-rows: 100px 60px 300px 200px 340px;
+        grid-template-rows: 100px 60px 300px auto 340px;
         grid-template-areas:
         "he he he he"
         "na na na na"
@@ -525,7 +551,7 @@ footer{
     #about_page_wrapper{
         display: grid;
         grid-template-columns: 10%  1fr 10% ;
-        grid-template-rows: 100px 60px 700px 340px;
+        grid-template-rows: 100px 60px auto 340px;
         grid-template-areas: 
         "he he he"
         "na na na"
