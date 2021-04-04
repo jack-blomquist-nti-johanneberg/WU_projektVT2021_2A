@@ -593,6 +593,7 @@ footer{
 
     #service_main article{
         height: auto;
+        width: 80%;
         flex-direction: row;
     }
 
