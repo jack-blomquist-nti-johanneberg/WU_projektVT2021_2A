@@ -1,8 +1,11 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
 /* Allmän style */
 *{
     padding: 0;
     margin: 0;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* Style för index */
@@ -12,7 +15,7 @@
     height: 100vh;
     width: 100%;
     grid-template-columns: 1fr;
-    grid-template-rows: 75px 300px auto auto 800px;
+    grid-template-rows: 75px auto auto auto auto;
     grid-template-areas:
     "he"
     "sp"
@@ -29,6 +32,22 @@
 header{
     grid-area: he;
     background: rgb(20, 39, 78);
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: row;
+}
+
+header img{
+    height: 50px;
+    width: auto;
+    margin-left: 20px;
+}
+
+header h1{
+    color: rgb(241, 246, 249);
+    font-size: 30px;
+    margin-left: 20px;
 }
 
 nav{
@@ -107,7 +126,7 @@ nav a:visited{
     align-items: center;
     transition: 0.2s;
     list-style: none;
-    z-index: 0;
+    z-index: 1;
 }
 
 .sub_service_menu li a{
@@ -124,7 +143,26 @@ nav a:visited{
 
 #main_section_picture{
     grid-area: sp;
-    background: lightcoral;
+    background: rgb(241, 246, 249);
+}
+
+#main_picture_enclosure{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main_picture_enclosure img{
+    height: auto;
+    width: 100%;
+}
+
+#main_picture_enclosure h2{
+    position: absolute;
+    color: rgb(241, 246, 249);
+    text-shadow: 2px 2px 8px rgb(57, 72, 103);
+    font-size: 40px;
+    vertical-align: middle;
 }
 
 #main_section_info{
@@ -135,11 +173,14 @@ nav a:visited{
     justify-items: center;
 }
 
+#main_section_info a{
+    color: rgb(20, 39, 78);
+}
+
 #main_article_info{
     margin: 40px;
     padding: 10px;
-    border: rgb(57, 72, 103) 5px solid;
-    border-radius: 5px;
+    color: rgb(57, 72, 103);
     background: rgb(241, 246, 249);
 }
 
@@ -151,12 +192,15 @@ nav a:visited{
     justify-items: center;
 }
 
+#main_section_serv a{
+    color: rgb(20, 39, 78);
+}
+
 #main_article_serv{
     margin: 40px;
     padding: 10px;
+    color: rgb(57, 72, 103);
     background: rgb(241, 246, 249);
-    border: rgb(57, 72, 103) 5px solid;
-    border-radius: 5px;
 }
 
 footer{
@@ -189,16 +233,13 @@ footer{
 }
 
 #footer_info_section{
-    height: 200px;
-    width: 300px;
-    padding: 40px;
+    padding: 20px;
     color: rgb(241, 246, 249);
 }
 
 #footer_nav{
-    height: 110px;
-    width: 180px;
-    padding: 40px;
+    padding: 20px;
+    padding-left: 40px;
     color: rgb(241, 246, 249);
 }
 
@@ -212,7 +253,16 @@ footer{
 }
 
 #footer_contact{
-    padding: 40px;
+    padding: 20px;
+    padding-left: 40px;
+    color: rgb(241, 246, 249);
+}
+
+#footer_contact li{
+    margin: 5px;
+}
+
+#footer_contact a{
     color: rgb(241, 246, 249);
 }
 
@@ -224,7 +274,7 @@ footer{
     height: 100vh;
     width: 100%;
     grid-template-columns: 1fr;
-    grid-template-rows: 75px 620px 1100px 800px;
+    grid-template-rows: 75px 640px auto auto;
     grid-template-areas:
     "he"
     "ip"
@@ -248,10 +298,9 @@ footer{
 }
 
 #service_private_info article{
-    margin: 65px 50px 50px 50px;
+    margin: 65px 20px 50px 20px;
     padding: 20px;
     height: auto;
-    width: 1fr;
     border-radius: 5px;
     background: rgb(57, 72, 103);
     color: rgb(241, 246, 249);
@@ -259,9 +308,12 @@ footer{
 
 #service_private_info a{
     color: rgb(241, 246, 249);
+}
+
+#dir_to_com{
     position: relative;
     bottom: -10px;
-    left: 10px;
+    left: 20px;
 }
 
 #service_main{
@@ -280,15 +332,19 @@ footer{
 #service_main article{
     border: rgb(57, 72, 103) solid 5px;
     border-radius: 5px;
-    height: 400px;
-    width: 300px;
+    height: auto;
+    width: auto;
+    margin: 20px;
+    padding: 5px;
     display: flex;
+    align-items: center;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
+    color: rgb(20, 39, 78);
 }
 
 #service_main article img{
-    height: 200px;
+    height: 300px;
     width: 300px;
 }
 
@@ -306,10 +362,9 @@ footer{
 }
 
 #service_company_info article{
-    margin: 65px 50px 50px 50px;
+    margin: 65px 20px 50px 20px;
     padding: 20px;
     height: auto;
-    width: 1fr;
     border-radius: 5px;
     background: rgb(57, 72, 103);
     color: rgb(241, 246, 249);
@@ -317,6 +372,9 @@ footer{
 
 #service_company_info a{
     color: rgb(241, 246, 249);
+}
+
+#dir_to_pri{
     position: relative;
     bottom: -10px;
     left: 10px;
@@ -330,7 +388,7 @@ footer{
     height: 100vh;
     width: 100%;
     grid-template-columns: 1fr;
-    grid-template-rows: 75px 300px auto auto 800px;
+    grid-template-rows: 75px auto auto auto auto;
     grid-template-areas:
     "he"
     "ci"
@@ -351,6 +409,15 @@ footer{
 
 #contact_info article{
     margin: 30px;
+    color: rgb(20, 39, 78);
+}
+
+#contact_info li{
+    margin: 10px;
+}
+
+#contact_info a{
+    color: rgb(57, 72, 103);
 }
 
 #private_contact_info{
@@ -367,6 +434,7 @@ footer{
     height: auto;
     margin: 40px;
     padding: 10px;
+    color: rgb(20, 39, 78);
 }
 
 /* Style för about */
@@ -376,7 +444,7 @@ footer{
     height: 100vh;
     width: 100%;
     grid-template-columns: 1fr;
-    grid-template-rows: 75px auto 800px;
+    grid-template-rows: 75px auto auto;
     grid-template-areas: 
     "he"
     "as"
@@ -391,6 +459,7 @@ footer{
 #about_section{
     grid-area: as;
     background: rgb(241, 246, 249);
+    color: rgb(20, 39, 78);
 }
 
 #about_section article{
@@ -414,7 +483,7 @@ footer{
 
     #main_page_wrapper{
         grid-template-columns: 10% 1fr 1fr 10%;
-        grid-template-rows: 100px 60px 300px auto auto;
+        grid-template-rows: 100px 60px auto auto auto;
         grid-template-areas:
         "he he he he"
         "na na na na"
@@ -425,6 +494,14 @@ footer{
 
     header{
         z-index: 1;
+    }
+
+    header img{
+        height: 80px;
+    }
+
+    header h1{
+        font-size: 35px;
     }
 
     nav{
@@ -462,6 +539,7 @@ footer{
         position: absolute;
         flex-direction: row;
         justify-content: space-around;
+        z-index: 0;
     }
 
     .sub_service_menu_active{
@@ -485,7 +563,7 @@ footer{
     }
 
     #footer_info_section{
-        height: 200px;
+        height: auto;
         width: 400px;
     }
 
@@ -495,7 +573,7 @@ footer{
     #service_page_wrapper{
         display: grid;
         grid-template-columns: 10%  1fr 10% ;
-        grid-template-rows: 100px 60px 350px 600px 340px;
+        grid-template-rows: 100px 60px auto auto auto;
         grid-template-areas:
         "he he he"
         "na na na"
@@ -506,28 +584,34 @@ footer{
 
     #service_private_info a{
         position: relative;
-        bottom: -10px;
-        left: 20px;
+    }
+
+    #service_private_info article{
+        margin: 65px 50px 50px 50px;
     }
 
     #service_main article{
-        height: 200px;
-        width: 500px;
+        height: auto;
         flex-direction: row;
     }
 
     #service_main article img{
-        height: 200px;
-        width: 200px;
+        height: 300px;
+        width: auto;
+        padding-right: 5px;
     }
 
 
     /* Style för service_com */
 
-    #service_company_info a{
+    #dir_to_pri{
         position: relative;
         bottom: -10px;
         left: 20px;
+    }
+
+    #service_company_info article{
+        margin: 65px 50px 50px 50px;
     }
 
 
@@ -536,7 +620,7 @@ footer{
     #contact_page_wrapper{
         display: grid;
         grid-template-columns: 10% 1fr 1fr 10%;
-        grid-template-rows: 100px 60px 300px auto 340px;
+        grid-template-rows: 100px 60px auto auto auto;
         grid-template-areas:
         "he he he he"
         "na na na na"
@@ -551,7 +635,7 @@ footer{
     #about_page_wrapper{
         display: grid;
         grid-template-columns: 10%  1fr 10% ;
-        grid-template-rows: 100px 60px auto 340px;
+        grid-template-rows: 100px 60px auto auto;
         grid-template-areas: 
         "he he he"
         "na na na"
