@@ -318,7 +318,7 @@ footer{
     left: 20px;
 }
 
-#service_main{
+#service_main_private{
     grid-area: si;
     display: flex;
     justify-content: center;
@@ -327,12 +327,12 @@ footer{
     background: rgb(241, 246, 249);
 }
 
-#service_main h2{
+#service_main_private h2{
     margin-top: 20px;
     color: rgb(241, 246, 249);
 }
 
-#service_side_info{
+#private_side_info{
     background: rgb(57, 72, 103);
     border-radius: 5px;
     height: auto;
@@ -345,7 +345,7 @@ footer{
     color: rgb(241, 246, 249);
 }
 
-#service_side_info img{
+#private_side_info img{
     height: 250px;
     width: auto;
     border: rgb(241, 246, 249) 3px solid;
@@ -389,8 +389,8 @@ footer{
     grid-template-areas:
     "he"
     "ip"
-    "si"
     "sc"
+    "si"
     "fo";
 }
 
@@ -401,6 +401,46 @@ footer{
 
 #service_page_com .sub_service_menu li:nth-child(2){
     border-bottom: rgb(241, 246, 249) 4px solid;
+    border-radius: 2px;
+}
+
+#service_main_company{
+    grid-area: si;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    background: rgb(241, 246, 249);
+}
+
+#service_main_company h2{
+    margin-top: 20px;
+    color: rgb(241, 246, 249);
+}
+
+#company_side_info{
+    background: rgb(57, 72, 103);
+    border-radius: 5px;
+    height: auto;
+    width: 300px;
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(241, 246, 249);
+}
+
+#company_side_info article{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#company_side_info img{
+    height: 250px;
+    width: auto;
+    border: rgb(241, 246, 249) 3px solid;
     border-radius: 2px;
 }
 
@@ -430,20 +470,28 @@ footer{
 }
 
 #company_convince_section{
-    background: rgb(57, 72, 103);
+    background: rgb(241, 246, 249);
     border-radius: 5px;
     height: auto;
     width: auto;
-    margin: 20px;
+    margin: 10px;
     padding: 10px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    color: rgb(241, 246, 249);
+    color: rgb(57, 72, 103);
+}
+
+#company_convince_section article{
+    margin: 15px;
+}
+
+#company_convince_section h2{
+    color: rgb(57, 72, 103);
 }
 
 #company_convince_section a{
-    color: rgb(241, 246, 249);
+    color: rgb(57, 72, 103);
 }
 
 #company_coop_section{
@@ -726,18 +774,18 @@ footer{
         margin: 65px 50px 50px 50px;
     }
 
-    #service_main{
+    #service_main_private{
         justify-content: left;
         flex-direction: row;
         align-items: flex-start;
     }
 
-    #service_side_info{
+    #private_side_info{
         height: auto;
         width: 260px;
     }
 
-    #service_side_info img{
+    #private_side_info img{
         height: 250px;
     }
 
@@ -756,8 +804,8 @@ footer{
         "he he he"
         "na na na"
         "ls ip rs"
-        "ls si rs"
         "ls sc rs"
+        "ls si rs"
         "fo fo fo";
     }
 
@@ -767,12 +815,31 @@ footer{
         left: 20px;
     }
 
+    #company_side_info{
+        height: auto;
+        width: auto;
+        flex-direction: row;
+    }
+
+    #company_side_info article{
+        margin: 10px;
+    }
+
+    #company_side_info img{
+        height: 250px;
+    }
+
     #service_company_info article{
         margin: 65px 50px 50px 50px;
     }
 
+    #service_main_company h2{
+        margin-top: 0px;
+    }
+
     #company_convince_section{
         width: auto;
+        flex-flow: row;
     }
 
 
