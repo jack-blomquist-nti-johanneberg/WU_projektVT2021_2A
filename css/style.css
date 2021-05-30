@@ -194,7 +194,12 @@ nav a:visited{
 }
 
 #main_section_serv a{
+    display: block;
     color: rgb(20, 39, 78);
+}
+
+#main_section_serv a:first-of-type{
+    margin-bottom: 20px;
 }
 
 #main_article_serv{
@@ -652,10 +657,13 @@ footer{
 }
 
 .about_page_img{
+    display: block;
     border: rgb(57, 72, 103) 4px solid;
     border-radius: 2px;
+    margin-left: auto;
+    margin-right: auto;
     height: auto;
-    width: 90%;
+    width: 80%;
 }
 
 /* Style för desktop-läge */
@@ -740,6 +748,14 @@ footer{
         grid-area: rs;
         background:	rgb(155, 164, 180);
         box-shadow: inset 0px 0px 5px rgb(57, 72, 103);
+    }
+
+    #main_section_serv a{
+        display: inline;
+    }
+
+    #main_section_serv a:first-of-type{
+        margin-bottom: 0px;
     }
 
     #footer_wrapper{
